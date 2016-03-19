@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeSpaceBattle_POO.CSharp", "ArcadeSpaceBattle_POO.CSharp.csproj", "{D9112E89-ACAB-EA6E-ADB2-27D7E9D04A54}"
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeSpaceBattle", "ArcadeSpaceBattle.csproj", "{D9112E89-ACAB-EA6E-ADB2-27D7E9D04A54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
