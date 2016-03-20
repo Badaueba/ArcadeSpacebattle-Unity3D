@@ -1,4 +1,4 @@
-﻿namespace FATEC.OOTest.Abstractions {
+﻿namespace FATEC.ArcadeSpaceBattle.Abstractions {
     /// <summary>
     /// Representes a movable object.
     /// </summary>

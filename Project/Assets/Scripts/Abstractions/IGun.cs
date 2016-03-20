@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-namespace FATEC.OOTest.Abstractions {
+﻿using FATEC.ArcadeSpaceBattle.Objects;
+using UnityEngine;
+namespace FATEC.ArcadeSpaceBattle.Abstractions {
     /// <summary>
     /// Represents a gun that shoots things
     /// </summary>

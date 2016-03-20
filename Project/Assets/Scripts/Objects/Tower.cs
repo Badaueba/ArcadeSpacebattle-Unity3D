@@ -1,7 +1,7 @@
-﻿using FATEC.OOTest.Behaviours;
+﻿using FATEC.ArcadeSpaceBattle.Behaviours;
 using UnityEngine;
 
-namespace FATEC.OOTest.Objects {
+namespace FATEC.ArcadeSpaceBattle.Objects {
     /// <summary>
     /// Represent a object Tower
     /// </summary>

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FATEC.OOTest.Objects {
+namespace FATEC.ArcadeSpaceBattle.Objects {
     /// <summary>
     /// Represent a object Barrier
     /// </summary>

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using FATEC.OOTest.Abstractions;
+using FATEC.ArcadeSpaceBattle.Abstractions;
 
-namespace FATEC.OOTest.Controllers {
+namespace FATEC.ArcadeSpaceBattle.Controllers {
     /// <summary>
     /// Controls the movement of a ship
-    /// <see cref="FATEC.OOTest.Abstractions.IMover"/> object. 
+    /// <see cref="FATEC.ArcadeSpaceBattle.Abstractions.IMover"/> object. 
     /// </summary>
     public class MovimentController {
         /// <summary>Object that going to move</summary>

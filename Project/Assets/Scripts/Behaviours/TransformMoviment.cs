@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using FATEC.OOTest.Abstractions;
+using FATEC.ArcadeSpaceBattle.Abstractions;
 
-namespace FATEC.OOTest.Behaviours {
+namespace FATEC.ArcadeSpaceBattle.Behaviours {
     /// <summary>
     /// Moves the current game object by transform.
     /// </summary>

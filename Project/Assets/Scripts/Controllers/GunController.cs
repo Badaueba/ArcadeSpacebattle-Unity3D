@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using FATEC.OOTest.Abstractions;
-using FATEC.OOTest.Managers;
+using FATEC.ArcadeSpaceBattle.Abstractions;
+using FATEC.ArcadeSpaceBattle.Managers;
 
-namespace FATEC.OOTest.Controllers {
+namespace FATEC.ArcadeSpaceBattle.Controllers {
     /// <summary>
     /// Controls the shoot of guns
-    /// <see cref="FATEC.OOTest.Abstractions.IGun"/> object. 
+    /// <see cref="FATEC.ArcadeSpaceBattle.Abstractions.IGun"/> object. 
     /// </summary>
     public class GunController {
         /// <summary>List of Guns that going to shoot.</summary>

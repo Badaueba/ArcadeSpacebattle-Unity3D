@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using FATEC.OOTest.Abstractions;
-using FATEC.OOTest.Objects;
+using FATEC.ArcadeSpaceBattle.Abstractions;
+using FATEC.ArcadeSpaceBattle.Objects;
 
-namespace FATEC.OOTest.Behaviours {
+namespace FATEC.ArcadeSpaceBattle.Behaviours {
     /// <summary>
     /// Shoot a projectile or other thing.
     /// </summary>
@@ -22,7 +22,7 @@ namespace FATEC.OOTest.Behaviours {
         }
 
         public GameObject Shoot() {
-           GameObject clone = (GameObject) GameObject.Instantiate(this.ammo, this.transform.position, this.transform.rotation);
+            GameObject clone = (GameObject) GameObject.Instantiate(this.ammo, this.transform.position, this.transform.rotation);
             return clone;
         }
     }

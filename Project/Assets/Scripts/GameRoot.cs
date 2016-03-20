@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
-using FATEC.OOTest.Abstractions;
-using FATEC.OOTest.Controllers;
-using FATEC.OOTest.Joysticks;
-using FATEC.OOTest.Managers;
-using FATEC.OOTest.Objects;
-using FATEC.OOTest.Behaviours;
+using FATEC.ArcadeSpaceBattle.Abstractions;
+using FATEC.ArcadeSpaceBattle.Controllers;
+using FATEC.ArcadeSpaceBattle.Joysticks;
+using FATEC.ArcadeSpaceBattle.Managers;
+using FATEC.ArcadeSpaceBattle.Objects;
+using FATEC.ArcadeSpaceBattle.Behaviours;
 
-namespace FATEC.OOTest {
+namespace FATEC.ArcadeSpaceBattle {
     /// <summary>
     /// Game root.
     /// </summary>
@@ -29,15 +29,19 @@ namespace FATEC.OOTest {
         public float speedPlayer2 = 0.5f;
         public float fireRatePlayer1 = 0.5f;
         public float fireRatePlayer2 = 0.5f;
+        public int maxProjectileInScene;
+        public int maxBarrierInScene;
+        public int maxTowerInScene;
         //prefab
-        public GameObject _Player1Ship;
-        public GameObject _Player2Ship;
-        public GameObject _laser;
+        public GameObject player1Ship;
+        public GameObject player2Ship;
+        //public GameObject _laser;
+        //public GameObject _laser2;
 
         public void Awake() {
             ///Instantiate a model to get all componentes reference for create e ship
-            GameObject player1Ship = (GameObject)Instantiate(_Player1Ship.gameObject, _Player1Ship.transform.position, _Player1Ship.transform.rotation);
-            GameObject player2Ship = (GameObject)Instantiate(_Player2Ship.gameObject, _Player2Ship.transform.position, _Player2Ship.transform.rotation);
+            //GameObject player1Ship = (GameObject)Instantiate(_player1Ship.gameObject, _player1Ship.transform.position, _player1Ship.transform.rotation);
+            //GameObject player2Ship = (GameObject)Instantiate(_player2Ship.gameObject, _player2Ship.transform.position, _player2Ship.transform.rotation);
 
             ///Set all references to work with this
             player1 = new Ship(
@@ -52,14 +56,14 @@ namespace FATEC.OOTest {
                 player2Ship.GetComponent<TransformMoviment>(),
                 player2Ship.GetComponents<ProjectileGun>(),
                 player2Ship.tag);
-
+            /*
             laser = new Projectile(
                 _laser.gameObject,
                 _laser.GetComponent<Transform>(),
                 _laser.GetComponent<TransformMoviment>(),
                 _laser.tag);
-
-            MI = new ManagerInstantiate();
+                */
+            MI = new ManagerInstantiate(maxProjectileInScene, maxBarrierInScene, maxTowerInScene);
 
             this.joystickPlayer1 = new JoystickPlayer1();
             joystickPlayer2 = new JoystickPlayer2();

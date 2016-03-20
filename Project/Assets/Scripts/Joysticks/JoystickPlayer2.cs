@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using FATEC.OOTest.Abstractions;
+using FATEC.ArcadeSpaceBattle.Abstractions;
 
-namespace FATEC.OOTest.Joysticks {
+namespace FATEC.ArcadeSpaceBattle.Joysticks {
     /// <summary>
     /// Keyboard joystick.
     /// </summary>

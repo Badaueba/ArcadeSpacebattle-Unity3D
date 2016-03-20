@@ -1,4 +1,4 @@
-﻿namespace FATEC.OOTest.Abstractions {
+﻿namespace FATEC.ArcadeSpaceBattle.Abstractions {
 	/// <summary>
 	/// Represents a joystick input device.
 	/// </summary>
