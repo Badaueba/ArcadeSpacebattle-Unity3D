@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\DataProviders\KeyboardInputProvider.cs" />
      <Compile Include="Assets\Scripts\DataProviders\OUYAInputProvider.cs" />
      <Compile Include="Assets\Scripts\GameRoot.cs" />
+     <Compile Include="Assets\Scripts\Models\Point.cs" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="UnityEngine.UI">

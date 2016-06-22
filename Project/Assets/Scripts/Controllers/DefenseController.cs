@@ -3,39 +3,38 @@ using System;
 using System.Collections;
 
 using FATEC.ArcadeSpaceBattle.Abstractions;
+using FATEC.ArcadeSpaceBattle.Models;
 
 namespace FATEC.ArcadeSpaceBattle.Controllers {
 	public class DefenseController {
 		
 		protected IInputProvider input;
-		/// <summary>
-		/// The data center.
-		/// Estou usando o datacenter porque
-		/// é preciso pegar os pontos atualizados sempre
-		/// se passar os pontos do player apenas no construtor
-		/// nao estariam atualizados sempre quando for tentar utilizar
-		/// </summary>
-		protected DataCenter dataCenter;
 		protected Transform ship;
-		/// <summary>
-		/// The index of the player.
-		/// Esse index determina que player usara essa controller
-		/// 0 = player1 
-		/// 1 = player2
-		/// </summary>
-		protected int playerIndex;
+		protected GameObject tower;
+		protected GameObject barrier;
+		protected int towerPrice;
+		protected int barrierPrice;
+		protected Point points;
 		protected MonoBehaviour script;
 
-		public DefenseController ( IInputProvider input,
-			DataCenter dataCenter,
+		public DefenseController ( 
+			
+			IInputProvider input,
 			Transform ship,
-			int playerIndex,
+			GameObject tower,
+			GameObject barrier,
+			int towerPrice,
+			int barrierPrice,
+			Point points,
 			MonoBehaviour script){
 
 			this.input = input;
-			this.dataCenter = dataCenter;
 			this.ship = ship;
-			this.playerIndex = playerIndex;
+			this.tower = tower;
+			this.barrier = barrier;
+			this.towerPrice = towerPrice;
+			this.barrierPrice = barrierPrice;
+			this.points = points;
 			this.script = script;
 			script.StartCoroutine (Updater ());
 		}
@@ -44,24 +43,24 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 				if ( input.GetButton(1)) {
 					//Se caso o dinheiro do player for maior ou igual ao preço da torre, 
 					//Entao ele poderá instacia-la.
-					if (dataCenter.points [playerIndex] >= dataCenter.towerPrice) {
-						GameObject.Instantiate (dataCenter.tower, ship.position, ship.transform.rotation);
+					if (points.playerPoints >= towerPrice ) {
+						GameObject.Instantiate (tower, ship.position, ship.transform.rotation);
 						//Depois de instanciar a torre, é descontado dos seus pontos o valor que ela custa.
-						dataCenter.points[ playerIndex ] -= dataCenter.towerPrice;
-						yield return new WaitForSeconds (dataCenter.fireRate);
+						points.playerPoints -= towerPrice;
+						yield return new WaitForSeconds (0.2f);
 					}
 				}
 				if ( input.GetButton(2)) {
 					//Se caso o dinheiro do player for maior ou igual ao preço da barreira, 
 					//Entao ele poderá instacia-la.
-					if (dataCenter.points [playerIndex] >= dataCenter.barrierPrice) {
-						GameObject.Instantiate (dataCenter.barrier, ship.position, ship.transform.rotation);
-						//Depois de instanciar a barreira, é descontado dos seus pontos o valor que ela custa.
-						dataCenter.points[ playerIndex ] -= dataCenter.barrierPrice;
-						yield return new WaitForSeconds (dataCenter.fireRate);
+					if (points.playerPoints >= barrierPrice ) {
+						GameObject.Instantiate (barrier, ship.position, ship.transform.rotation);
+						//Depois de instanciar a torre, é descontado dos seus pontos o valor que ela custa.
+						points.playerPoints -= barrierPrice;
+						yield return new WaitForSeconds (0.2f);
 					}
 				}
-
+				Debug.Log ("points : " + points.playerPoints);
 				yield return new WaitForEndOfFrame();
 			}
 		}

@@ -4,6 +4,7 @@ using FATEC.ArcadeSpaceBattle.Abstractions;
 using FATEC.ArcadeSpaceBattle.DataProviders;
 using FATEC.ArcadeSpaceBattle.Controllers;
 using FATEC.ArcadeSpaceBattle.DataProcessors;
+using FATEC.ArcadeSpaceBattle.Models;
 
 namespace FATEC.ArcadeSpaceBattle {
     public class GameRoot : MonoBehaviour {
@@ -14,11 +15,13 @@ namespace FATEC.ArcadeSpaceBattle {
 		protected MovementController movementeControllerPlayer1;
 		protected ShootController shootControllerPlayer1;
 		protected DefenseController defenseControllerPlayer1;
+		protected Point pointsPlayer1;
 		
         void Awake() {
             this.dataCenter = GameObject.Find("DataCenter").GetComponent<DataCenter>();
             this.inputProvider = new KeyboardInputProvider();
 			this.moverPlayer1 = new Mover (this.dataCenter.ship1, this.dataCenter.speed);
+			this.pointsPlayer1 = new Point (500);
         }
 
         void Start() {
@@ -26,7 +29,8 @@ namespace FATEC.ArcadeSpaceBattle {
 			movementeControllerPlayer1 = new MovementController (this.inputProvider, this.moverPlayer1, this);
 			shootControllerPlayer1 = new ShootController (inputProvider, dataCenter.fireRate, dataCenter.laser1,
 			                                              dataCenter.ship1, this);
-			defenseControllerPlayer1 = new DefenseController (inputProvider, dataCenter, dataCenter.ship1, 0, this);
+			defenseControllerPlayer1 = new DefenseController (inputProvider, dataCenter.ship1, dataCenter.tower,
+				dataCenter.barrier, dataCenter.towerPrice, dataCenter.barrierPrice, pointsPlayer1, this);
 
         }
     }
