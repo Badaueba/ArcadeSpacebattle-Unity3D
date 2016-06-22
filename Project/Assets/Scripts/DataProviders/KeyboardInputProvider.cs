@@ -35,7 +35,7 @@ namespace FATEC.ArcadeSpaceBattle.DataProviders {
 
         public bool GetButton(int index) {
             if (index == 0) {
-                return Input.GetKey(KeyCode.Space);
+                return Input.GetKey( KeyCode.Space);
             }
             else {
                 return false;

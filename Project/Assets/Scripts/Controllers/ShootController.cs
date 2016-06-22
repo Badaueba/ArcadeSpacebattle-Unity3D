@@ -36,9 +36,11 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 
 		private IEnumerator Updater () {
 			while (true) {
-				if (input.GetButton(0)) 
+				if ( input.GetButton(0)) {
 					GameObject.Instantiate ( this.laser, ship.position, ship.rotation); 
-				yield return new WaitForSeconds( this.fireRate);
+					yield return new WaitForSeconds( this.fireRate);
+				}
+				yield return new WaitForEndOfFrame();
 			}
 		}
 	}
