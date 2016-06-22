@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DataProviders\KeyboardInputProvider.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/DefenseController.cs">
     <Files>
-      <File FileName="Assets\Scripts\DataProviders\KeyboardInputProvider.cs" Line="38" Column="54" />
+      <File FileName="Assets/Scripts/Controllers/ShootController.cs" Line="20" Column="23" />
+      <File FileName="Assets/Scripts/Controllers/DefenseController.cs" Line="34" Column="6" />
+      <File FileName="Assets/Scripts/DataProviders/KeyboardInputProvider.cs" Line="44" Column="35" />
+      <File FileName="Assets/Scripts/GameRoot.cs" Line="30" Column="87" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

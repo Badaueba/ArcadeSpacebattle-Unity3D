@@ -13,6 +13,7 @@ namespace FATEC.ArcadeSpaceBattle {
 		protected Mover moverPlayer1;
 		protected MovementController movementeControllerPlayer1;
 		protected ShootController shootControllerPlayer1;
+		protected DefenseController defenseControllerPlayer1;
 		
         void Awake() {
             this.dataCenter = GameObject.Find("DataCenter").GetComponent<DataCenter>();
@@ -22,10 +23,10 @@ namespace FATEC.ArcadeSpaceBattle {
 
         void Start() {
             this.restartController = new RestartController(this, this.dataCenter, this.inputProvider);
-			movementeControllerPlayer1 = new MovementController (this.inputProvider, this.moverPlayer1, 
-			                                                    this);
+			movementeControllerPlayer1 = new MovementController (this.inputProvider, this.moverPlayer1, this);
 			shootControllerPlayer1 = new ShootController (inputProvider, dataCenter.fireRate, dataCenter.laser1,
 			                                              dataCenter.ship1, this);
+			defenseControllerPlayer1 = new DefenseController (inputProvider, dataCenter, dataCenter.ship1, 0, this);
 
         }
     }

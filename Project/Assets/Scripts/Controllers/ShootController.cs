@@ -33,7 +33,6 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 			this.script = script;
 			script.StartCoroutine (Updater ());
 		}
-
 		private IEnumerator Updater () {
 			while (true) {
 				if ( input.GetButton(0)) {
