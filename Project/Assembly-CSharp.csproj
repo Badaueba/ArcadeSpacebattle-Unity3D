@@ -49,10 +49,12 @@
      <Compile Include="Assets\Scripts\Abstractions\IInputProvider.cs" />
      <Compile Include="Assets\Scripts\Components\ColliderChecker.cs" />
      <Compile Include="Assets\Scripts\Components\ColliderControllerComponent.cs" />
+     <Compile Include="Assets\Scripts\Components\GUIContainer.cs" />
      <Compile Include="Assets\Scripts\Components\LaserMover.cs" />
      <Compile Include="Assets\Scripts\Components\TowerShoot.cs" />
      <Compile Include="Assets\Scripts\Controllers\ColliderController.cs" />
      <Compile Include="Assets\Scripts\Controllers\DefenseController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\GUIController.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameOverController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\RestartController.cs" />

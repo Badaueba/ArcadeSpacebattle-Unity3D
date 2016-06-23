@@ -25,6 +25,7 @@ namespace FATEC.ArcadeSpaceBattle {
         public Point pointPlayer1;
         public Point pointPlayer2;
         ///--------------------------------------------------------------------------------------------------
-
+		public GUIContainer guiContainerPlayer1;
+		public GUIContainer guiContainerPlayer2;
     }
 }

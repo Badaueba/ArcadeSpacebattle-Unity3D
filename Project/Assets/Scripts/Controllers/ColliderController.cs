@@ -22,7 +22,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
             while (true) {
                 if (this.colliderChecker.GetChecherInfo()) {
                     this.life.IncreaseHealth(-1);
-                    point.playerPoints += 25;
+					point.points += 25;
                     GameObject.Destroy(this.colliderChecker.GetChecherData());
                     this.colliderChecker.ResetChecher();
                 }

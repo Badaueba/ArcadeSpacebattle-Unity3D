@@ -14,7 +14,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 		protected GameObject barrier;
 		protected int towerPrice;
 		protected int barrierPrice;
-		protected Point points;
+		protected Point point;
 		protected MonoBehaviour script;
 
 		public DefenseController ( 
@@ -25,7 +25,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 			GameObject barrier,
 			int towerPrice,
 			int barrierPrice,
-			Point points,
+			Point point,
 			MonoBehaviour script){
 
 			this.input = input;
@@ -34,7 +34,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 			this.barrier = barrier;
 			this.towerPrice = towerPrice;
 			this.barrierPrice = barrierPrice;
-			this.points = points;
+			this.point = point;
 			this.script = script;
 			script.StartCoroutine (Updater ());
 		}
@@ -43,24 +43,23 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 				if ( input.GetButton(1)) {
 					//Se caso o dinheiro do player for maior ou igual ao preço da torre, 
 					//Entao ele poderá instacia-la.
-					if (points.playerPoints >= towerPrice ) {
+					if ( point.points >= towerPrice ) {
 						GameObject.Instantiate (tower, ship.position, ship.transform.rotation);
 						//Depois de instanciar a torre, é descontado dos seus pontos o valor que ela custa.
-						points.playerPoints -= towerPrice;
+						point.points -= towerPrice;
 						yield return new WaitForSeconds (0.2f);
 					}
 				}
 				if ( input.GetButton(2)) {
 					//Se caso o dinheiro do player for maior ou igual ao preço da barreira, 
 					//Entao ele poderá instacia-la.
-					if (points.playerPoints >= barrierPrice ) {
+					if (point.points >= barrierPrice ) {
 						GameObject.Instantiate (barrier, ship.position, ship.transform.rotation);
 						//Depois de instanciar a torre, é descontado dos seus pontos o valor que ela custa.
-						points.playerPoints -= barrierPrice;
+						point.points -= barrierPrice;
 						yield return new WaitForSeconds (0.2f);
 					}
 				}
-				Debug.Log ("points : " + points.playerPoints);
 				yield return new WaitForEndOfFrame();
 			}
 		}
