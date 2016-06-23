@@ -48,8 +48,12 @@
      <Compile Include="Assets\Ouya\SDK\Scripts\OuyaGameObject.cs" />
      <Compile Include="Assets\Scripts\Abstractions\IInputProvider.cs" />
      <Compile Include="Assets\Scripts\Components\ColliderChecker.cs" />
+     <Compile Include="Assets\Scripts\Components\ColliderControllerComponent.cs" />
      <Compile Include="Assets\Scripts\Components\LaserMover.cs" />
+     <Compile Include="Assets\Scripts\Components\TowerShoot.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ColliderController.cs" />
      <Compile Include="Assets\Scripts\Controllers\DefenseController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\GameOverController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\RestartController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />
@@ -59,6 +63,7 @@
      <Compile Include="Assets\Scripts\DataProviders\KeyboardInputProvider.cs" />
      <Compile Include="Assets\Scripts\DataProviders\OUYAInputProvider.cs" />
      <Compile Include="Assets\Scripts\GameRoot.cs" />
+     <Compile Include="Assets\Scripts\Models\Life.cs" />
      <Compile Include="Assets\Scripts\Models\Point.cs" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
