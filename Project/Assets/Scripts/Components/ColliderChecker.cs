@@ -11,21 +11,28 @@ namespace FATEC.ArcadeSpaceBattle.Components {
 
         public string tagToChecker = "Untagged";
         protected bool ChecherInfo;
+        protected GameObject ChecherData;
 
-        public void SetGoalChecherInfo(bool value) {
-            this.ChecherInfo = value;
+        public void ResetChecher() {
+            this.ChecherInfo = false;
+            this.ChecherData = null;
         }
-        public bool GetGoalChecherInfo() {
+        public bool GetChecherInfo() {
             return this.ChecherInfo;
+        }
+        public GameObject GetChecherData() {
+            return this.ChecherData;
         }
 
         protected void Awake() {
             this.ChecherInfo = false;
+            this.ChecherData = null;
         }
 
-        protected void OnTriggerEnter(Collider other) {
+        protected void OnTriggerEnter2D(Collider2D other) {
             if (other.CompareTag(this.tagToChecker)) {
                 this.ChecherInfo = true;
+                this.ChecherData = other.gameObject;
             }
         }
     }

@@ -16,12 +16,24 @@ namespace FATEC.ArcadeSpaceBattle {
 		protected ShootController shootControllerPlayer1;
 		protected DefenseController defenseControllerPlayer1;
 		protected Point pointsPlayer1;
-		
+
+        ///--------------------------------------------------------------------------------------------------
+        ///Criadas por Lael
+        protected ColliderController colliderControllerPlayer1;
+        protected ColliderController colliderControllerPlayer2;
+        protected Point pointsPlayer2;
+        protected GameOverController gameOverController;
+        ///--------------------------------------------------------------------------------------------------
+
         void Awake() {
             this.dataCenter = GameObject.Find("DataCenter").GetComponent<DataCenter>();
             this.inputProvider = new KeyboardInputProvider();
 			this.moverPlayer1 = new Mover (this.dataCenter.ship1, this.dataCenter.speed);
 			this.pointsPlayer1 = new Point (500);
+            ///--------------------------------------------------------------------------------------------------
+            ///Criadas por Lael
+            this.pointsPlayer2 = new Point(500);
+            ///--------------------------------------------------------------------------------------------------
         }
 
         void Start() {
@@ -31,7 +43,12 @@ namespace FATEC.ArcadeSpaceBattle {
 			                                              dataCenter.ship1, this);
 			defenseControllerPlayer1 = new DefenseController (inputProvider, dataCenter.ship1, dataCenter.tower,
 				dataCenter.barrier, dataCenter.towerPrice, dataCenter.barrierPrice, pointsPlayer1, this);
-
+            ///--------------------------------------------------------------------------------------------------
+            ///Criadas por Lael
+            this.colliderControllerPlayer1 = new ColliderController(this.dataCenter.colliderCheckerPlayer1, this.dataCenter.lifePlayer1, this.pointsPlayer2 ,this);
+            this.colliderControllerPlayer2 = new ColliderController(this.dataCenter.colliderCheckerPlayer2, this.dataCenter.lifePlayer2, this.pointsPlayer1, this);
+            this.gameOverController = new GameOverController(this.dataCenter.lifePlayer1, this.dataCenter.lifePlayer2, this);
+            ///--------------------------------------------------------------------------------------------------
         }
     }
 }
