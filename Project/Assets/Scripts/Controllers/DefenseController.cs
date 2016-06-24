@@ -54,7 +54,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
 					//Se caso o dinheiro do player for maior ou igual ao preço da barreira, 
 					//Entao ele poderá instacia-la.
 					if (point.points >= barrierPrice ) {
-						GameObject.Instantiate (barrier, ship.position, ship.transform.rotation);
+						GameObject.Instantiate (barrier, ship.transform.position , ship.transform.rotation);
 						//Depois de instanciar a torre, é descontado dos seus pontos o valor que ela custa.
 						point.points -= barrierPrice;
 						yield return new WaitForSeconds (0.2f);

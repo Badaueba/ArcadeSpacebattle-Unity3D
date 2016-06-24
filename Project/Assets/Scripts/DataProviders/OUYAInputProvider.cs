@@ -7,62 +7,57 @@ namespace FATEC.ArcadeSpaceBattle.DataProviders {
     /// </summary>
     public class OUYAInputProvider : IInputProvider {
 
+		protected int joystick;
+		public OUYAInputProvider (int joystick) {
+			this.joystick = joystick;
+		}
         public float GetAxis(int index) {
             float axis = 0;
             if (index == 0) {
-                    #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.IsControllerConnected(0)) {
-				        axis = OuyaSDK.OuyaInput.GetAxis(0, OuyaController.AXIS_LS_X);
-                    }
-                    #endif
-            }
-            else if (index == 1) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.IsControllerConnected(0)) {
-				        axis = OuyaSDK.OuyaInput.GetAxis(0, OuyaController.AXIS_RS_Y);
-                    }
+                if (OuyaSDK.OuyaInput.IsControllerConnected(joystick)) {
+			        axis = OuyaSDK.OuyaInput.GetAxis(joystick, OuyaController.AXIS_LS_X);
+				}	
                 #endif
             }
-
             if (Mathf.Abs(axis) >= 0.2f) {
                 return axis;
             }
             else {
                 return 0;
             }
-
         }
 
         public bool GetButton(int index) {
             bool button = false;
             if (index == 0) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.GetButton(0, OuyaController.BUTTON_Y)) {
-					        button = true;
+                    if (OuyaSDK.OuyaInput.GetButton(joystick, OuyaController.BUTTON_O)) {
+			        	button = true;
 			        } 
                 #endif
                 return button;
             }
             else if (index == 1) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.GetButton(0, OuyaController.BUTTON_O)) {
-					        button = true;
+                    if (OuyaSDK.OuyaInput.GetButton(joystick, OuyaController.BUTTON_U)) {
+						button = true;
 			        }
                 #endif
                 return button;
             }
             else if (index == 2) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.GetButton(0, OuyaController.BUTTON_U)) {
-					        button = true;
+                    if (OuyaSDK.OuyaInput.GetButton(joystick, OuyaController.BUTTON_Y)) {
+			        	button = true;
 			        }
                 #endif
                 return button;
             }
             else if (index == 3) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OuyaSDK.OuyaInput.GetButton(0, OuyaController.BUTTON_A)) {
-					        button = true;
+                    if (OuyaSDK.OuyaInput.GetButton(joystick, OuyaController.BUTTON_A)) {
+				    	button = true;
 			        }
                 #endif
                 return button;

@@ -11,8 +11,10 @@ namespace FATEC.ArcadeSpaceBattle {
 		public float fireRate;
 		public GameObject laser1;
 		public GameObject laser2;
-		public GameObject tower;
-		public GameObject barrier;
+		public GameObject tower1;
+		public GameObject tower2;
+		public GameObject barrier1;
+		public GameObject barrier2;
 		public int towerPrice;
 		public int barrierPrice;
 		public float speed;
