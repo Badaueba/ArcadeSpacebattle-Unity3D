@@ -21,7 +21,7 @@ namespace FATEC.ArcadeSpaceBattle.Controllers {
         protected IEnumerator Updater() {
             while (true) {
                 if (this.colliderChecker.GetChecherInfo()) {
-                    this.life.IncreaseHealth(-1);
+                    this.life.IncreaseHealth(-5);
 					point.points += 25;
                     GameObject.Destroy(this.colliderChecker.GetChecherData());
                     this.colliderChecker.ResetChecher();

@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Controllers\DefenseController.cs" />
      <Compile Include="Assets\Scripts\Controllers\GUIController.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameOverController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\LevelController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\RestartController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />

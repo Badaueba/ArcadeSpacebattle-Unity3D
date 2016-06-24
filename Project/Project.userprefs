@@ -1,14 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameRoot.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameRoot.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameRoot.cs" Line="79" Column="3" />
-      <File FileName="Assets/Scripts/Controllers/DefenseController.cs" Line="25" Column="23" />
-      <File FileName="Assets/Scripts/DataProviders/KeyboardInputProvider.cs" Line="2" Column="44" />
-      <File FileName="Assets/Scripts/DataProviders/OUYAInputProvider.cs" Line="45" Column="14" />
-      <File FileName="Assets/Scripts/DataCenter.cs" Line="15" Column="28" />
-      <File FileName="Assets/Scripts/Components/LaserMover.cs" Line="31" Column="44" />
-      <File FileName="Assets/Scripts/Components/Winner.cs" Line="10" Column="4" />
+      <File FileName="Assets\Scripts\GameRoot.cs" Line="42" Column="4" />
+      <File FileName="Assets\Scripts\Controllers\DefenseController.cs" Line="48" Column="38" />
+      <File FileName="Assets\Scripts\DataProviders\KeyboardInputProvider.cs" Line="16" Column="41" />
+      <File FileName="Assets\Scripts\DataProviders\OUYAInputProvider.cs" Line="11" Column="41" />
+      <File FileName="Assets\Scripts\DataCenter.cs" Line="34" Column="1" />
+      <File FileName="Assets\Scripts\Components\LaserMover.cs" Line="12" Column="33" />
+      <File FileName="Assets\Scripts\Components\Winner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controllers\ShootController.cs" Line="41" Column="6" />
+      <File FileName="Assets\Scripts\Controllers\LevelController.cs" Line="6" Column="14" />
+      <File FileName="Assets\Scripts\Controllers\ColliderController.cs" Line="24" Column="48" />
+      <File FileName="Assets\Scripts\Models\Life.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Models\Point.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
