@@ -17,4 +17,4 @@ Java JDK 6
 OUYA Core Plugin for unity
 ##Contributors
 * Alan G. Alves <https://github.com/Badaueba>
-* Lael Jader <https://github.com/laeljd
+* Lael Jader <https://github.com/laeljd>
